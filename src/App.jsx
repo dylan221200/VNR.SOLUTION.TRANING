@@ -20,8 +20,9 @@ import {
 import React from "react";
 import { useMemo, useState } from "react";
 
-const flowDiagram = "/Images/FlowDiagram.png";
-const sequenceDiagram = "/Images/SequenceDiagram_6_step.png";
+const publicUrl = (path) => `${import.meta.env.BASE_URL}${path}`.replace(/\/{2,}/g, "/");
+const flowDiagram = publicUrl("Images/FlowDiagram.png");
+const sequenceDiagram = publicUrl("Images/SequenceDiagram_6_step.png");
 
 const steps = [
   {
@@ -212,7 +213,7 @@ const automationPrinciples = [
 const presentationFiles = [
   {
     file: "s1.txt",
-    href: "/presents/s1.txt",
+    href: publicUrl("presents/s1.txt"),
     title: "Mở đầu và tổng quan 6 bước",
     related: "Tổng quan, hiện trạng team, 6 bước delivery",
     summary:
@@ -226,7 +227,7 @@ const presentationFiles = [
   },
   {
     file: "s2.txt",
-    href: "/presents/s2.txt",
+    href: publicUrl("presents/s2.txt"),
     title: "Đi sâu 3 bước cuối",
     related: "Review Ready, testing, DevOps và đóng US",
     summary:
