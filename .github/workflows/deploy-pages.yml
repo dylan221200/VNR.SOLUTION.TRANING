@@ -33,6 +33,11 @@ jobs:
       - name: Build
         run: npm run build -- --base "/VNR.SOLUTION.TRANING/"
 
+      - name: Copy static resources
+        run: |
+          cp -R Images dist/Images
+          cp -R presents dist/presents
+
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
