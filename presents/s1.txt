@@ -1,0 +1,29 @@
+Chào mọi người,
+
+Hôm nay tôi sẽ trình bày ngắn gọn về cách team đang xử lý một yêu cầu trong Sprint, từ lúc nhận yêu cầu cho đến khi hoàn tất.
+
+Trước tiên, đây không phải là một quy trình mới. Đây là quy trình hiện tại của team, được sắp xếp lại thành 6 bước để mọi người dễ nhìn, dễ hiểu và dễ kiểm soát hơn.
+
+Hiện tại, khi team nhận một yêu cầu, sẽ có nhiều vai trò cùng tham gia như PO, BA, PD, EM/Scrum Master, SE, QC và CI/CD. Mỗi vai trò phụ trách một phần khác nhau, từ làm rõ yêu cầu, phân tích nghiệp vụ, thiết kế giao diện, phát triển, kiểm thử, triển khai và xác nhận hoàn tất.
+
+Vấn đề hiện tại là khi thông tin bàn giao giữa các bước chưa đủ rõ, người ở bước sau thường phải hỏi lại, tự suy đoán hoặc làm lại. Ví dụ: yêu cầu chưa rõ mục tiêu, tài liệu nghiệp vụ thiếu tình huống xử lý, thiết kế giao diện thiếu trạng thái màn hình, hoặc lỗi được báo chưa đủ thông tin. Những việc này làm team mất thêm thời gian, dễ phát sinh lỗi và khó dự đoán khi nào một yêu cầu sẽ hoàn thành.
+
+Vì vậy, tài liệu này giúp làm rõ lại quy trình hiện tại thành 6 bước.
+
+Bước 1 là tiếp nhận và chia nhỏ yêu cầu. PO cần làm rõ yêu cầu này giải quyết vấn đề gì, mục tiêu là gì, phạm vi đến đâu, mức độ ưu tiên thế nào và có phụ thuộc vào phần nào khác không.
+
+Bước 2 là phân tích nghiệp vụ. BA làm rõ cách nghiệp vụ vận hành, các quy tắc cần tuân theo, các trường hợp đặc biệt và tiêu chí để biết yêu cầu này làm đúng hay chưa.
+
+Bước 3 là thiết kế giao diện. PD phối hợp với BA để thiết kế màn hình, đồng thời làm rõ các trạng thái như khi chưa có dữ liệu, khi đang tải, khi có lỗi, khi thành công và các thông báo hiển thị cho người dùng.
+
+Bước 4 là kiểm tra xem yêu cầu đã đủ rõ để bắt đầu làm chưa. EM, SE và QC cùng xem lại yêu cầu. Nếu thông tin đã đủ rõ thì SE bắt đầu phát triển. Nếu chưa đủ rõ thì cần quay lại làm rõ trước, tránh vừa làm vừa đoán.
+
+Bước 5 là kiểm thử và xử lý lỗi. QC kiểm tra yêu cầu theo các tiêu chí đã thống nhất. Nếu có lỗi, QC cần mô tả rõ lỗi xảy ra ở đâu, thao tác thế nào, kết quả mong đợi là gì, kết quả thực tế là gì và có bằng chứng kèm theo. Sau đó SE sửa lỗi và QC kiểm tra lại.
+
+Bước 6 là triển khai và xác nhận hoàn tất. Sau khi yêu cầu đã được phát triển và kiểm thử xong, team sẽ triển khai lên môi trường phù hợp, kiểm tra lại các phần quan trọng và xác nhận yêu cầu đã đủ điều kiện để đóng.
+
+Một điểm quan trọng khác là hiện tại team đã bắt đầu sử dụng AI ở một số bước. AI có thể hỗ trợ tóm tắt yêu cầu, gợi ý tiêu chí kiểm tra, rà soát tài liệu, hỗ trợ viết test case, hỗ trợ lập trình, phân tích lỗi hoặc chuẩn hóa nội dung báo lỗi. Tuy nhiên, AI chỉ là công cụ hỗ trợ. Người phụ trách vẫn phải kiểm tra lại và chịu trách nhiệm cuối cùng cho kết quả.
+
+Kỳ vọng khi trình bày rõ quy trình hiện tại là mọi người hiểu rõ hơn mỗi bước cần làm gì, ai chịu trách nhiệm, đầu ra cần có là gì và khi nào một yêu cầu được xem là đủ rõ để bắt đầu làm hoặc đủ điều kiện để hoàn tất.
+
+Tóm lại, mục tiêu của tài liệu này là giúp team làm việc rõ ràng hơn, giảm hiểu nhầm, giảm làm lại, phát hiện vấn đề sớm hơn và sử dụng AI một cách có kiểm soát.
