@@ -1,0 +1,49 @@
+Tiếp theo, tôi sẽ đi sâu hơn vào 3 bước cuối của quy trình hiện tại: review trước khi code, testing, và CI/CD để đóng yêu cầu.
+
+Đây là 3 bước ảnh hưởng trực tiếp đến chất lượng đầu ra của một US. Điểm cần nhấn mạnh là ở cả 3 bước này, team có thể dùng AI để hỗ trợ tự động hoá một phần công việc, giúp giảm thao tác thủ công, giảm thiếu sót và chuẩn hoá đầu ra.
+
+Đầu tiên là bước review trước khi code.
+
+Khó khăn hiện tại là có những yêu cầu chưa thật sự rõ nhưng vẫn được đưa vào làm. Ví dụ: mục tiêu chưa rõ, phạm vi còn mở, quy tắc nghiệp vụ thiếu, thiết kế giao diện chưa đủ trạng thái, hoặc QC chưa nắm rõ sẽ kiểm tra những gì.
+
+Khi đó, SE dễ phải vừa làm vừa hỏi lại, hoặc tự suy đoán theo cách hiểu của mình. Điều này làm tăng rủi ro làm sai, phát sinh lỗi và phải sửa lại nhiều lần.
+
+Mục tiêu của bước này là kiểm tra xem yêu cầu đã đủ rõ để bắt đầu làm hay chưa. Trước khi code, team cần thống nhất được yêu cầu giải quyết vấn đề gì, phạm vi làm đến đâu, tiêu chí hoàn thành là gì, có tình huống đặc biệt nào và còn điểm nào đang vướng hay không.
+
+Ở bước này, AI có thể hỗ trợ tự động rà soát tài liệu yêu cầu theo checklist. Ví dụ: kiểm tra yêu cầu đã có mục tiêu chưa, phạm vi đã rõ chưa, tiêu chí hoàn thành đã đủ chưa, có thiếu tình huống đặc biệt không, có điểm nào dễ gây hiểu nhầm không. AI cũng có thể hỗ trợ tóm tắt yêu cầu, gợi ý câu hỏi cần làm rõ và tạo danh sách rủi ro ban đầu.
+
+Tuy nhiên, AI chỉ hỗ trợ phát hiện và gợi ý. Người quyết định cuối cùng vẫn là BA, PO, SE, QC và EM/Scrum Master.
+
+Kết quả mong muốn là SE hiểu rõ cần làm gì, QC hiểu rõ cần kiểm tra gì, BA/PO chốt được nghiệp vụ, và EM/Scrum Master nắm được blocker nếu có.
+
+Tiếp theo là bước testing.
+
+Khó khăn hiện tại là việc kiểm thử đôi khi chưa bao phủ đủ các tình huống quan trọng. Team có thể kiểm tra luồng đúng, nhưng chưa kiểm tra đủ luồng sai, dữ liệu thiếu, dữ liệu không hợp lệ, phân quyền, thông báo lỗi hoặc các tình huống đặc biệt.
+
+Ngoài ra, bug report đôi khi chưa đủ rõ. Nếu lỗi thiếu thao tác tái hiện, thiếu kết quả mong đợi, thiếu kết quả thực tế hoặc thiếu bằng chứng, SE sẽ mất thêm thời gian hỏi lại và vòng sửa lỗi sẽ kéo dài.
+
+Mục tiêu của bước testing là kiểm tra sản phẩm có đúng với yêu cầu đã thống nhất hay không. QC cần kiểm tra đủ các tình huống chính, tình huống sai, quy tắc nghiệp vụ, dữ liệu, phân quyền và các trường hợp đặc biệt.
+
+Ở bước này, AI có thể hỗ trợ tự động gợi ý testcase từ yêu cầu và tiêu chí hoàn thành đã có. AI cũng có thể hỗ trợ kiểm tra xem testcase có thiếu tình huống nào không, ví dụ thiếu trường hợp lỗi, thiếu phân quyền, thiếu dữ liệu trống hoặc thiếu tình huống đặc biệt. Khi có lỗi, AI có thể hỗ trợ chuẩn hoá bug report theo format rõ ràng: thao tác thực hiện, kết quả mong đợi, kết quả thực tế, bằng chứng, môi trường và mức độ ảnh hưởng.
+
+Sau khi SE sửa lỗi, AI cũng có thể hỗ trợ gợi ý những phần liên quan cần kiểm tra lại, để tránh tình trạng sửa một lỗi nhưng phát sinh lỗi khác.
+
+Kết quả mong muốn là lỗi được phát hiện sớm hơn, mô tả rõ hơn, sửa nhanh hơn và giảm vòng lặp sửa đi sửa lại.
+
+Cuối cùng là bước CI/CD, triển khai và đóng yêu cầu.
+
+Khó khăn hiện tại là sau khi triển khai, việc kiểm tra lại đôi khi chưa đủ chặt. Có thể chưa kiểm tra nhanh các chức năng chính, chưa xem lỗi kịp thời, hoặc chưa có quyết định rõ nếu phát sinh lỗi nghiêm trọng.
+
+Một vấn đề khác là yêu cầu có thể được đóng khi chưa đủ bằng chứng hoàn tất. Ví dụ: code đã xong nhưng test chưa đủ rõ, triển khai xong nhưng chưa kiểm tra lại, còn lỗi quan trọng nhưng chưa có quyết định xử lý, hoặc chưa có xác nhận nghiệp vụ khi cần.
+
+Mục tiêu của bước này là triển khai an toàn và chỉ đóng yêu cầu khi đã đủ điều kiện. Trước khi đóng, team cần chắc chắn rằng phần phát triển đã xong, kiểm thử đã đạt, triển khai thành công nếu có triển khai, lỗi nghiêm trọng đã được xử lý hoặc có quyết định rõ ràng, và các bên liên quan đã xác nhận nếu cần.
+
+Ở bước này, AI có thể hỗ trợ tự động đọc log, tóm tắt lỗi sau triển khai, cảnh báo các lỗi bất thường và gợi ý nguyên nhân ban đầu. AI cũng có thể hỗ trợ tạo checklist đóng yêu cầu, kiểm tra xem còn thiếu bằng chứng nào không, ví dụ test result, xác nhận kiểm thử, xác nhận triển khai, xác nhận nghiệp vụ hoặc ghi chú lỗi còn tồn tại.
+
+Kết quả mong muốn là mỗi US khi được đóng đều có cơ sở rõ ràng, không đóng theo cảm tính.
+
+Tóm lại, mục tiêu của 3 bước cuối là: không bắt đầu code khi yêu cầu chưa rõ, không bàn giao khi chưa kiểm tra đủ, không đóng yêu cầu khi chưa có bằng chứng hoàn tất.
+
+AI sẽ được dùng để hỗ trợ tự động hoá các việc lặp lại như rà soát checklist, gợi ý câu hỏi, tạo testcase, chuẩn hoá bug report, phân tích log và kiểm tra điều kiện đóng yêu cầu. Nhưng người phụ trách vẫn phải review và xác nhận cuối cùng.
+
+Nếu làm tốt 3 bước này, team sẽ giảm hiểu nhầm, giảm lỗi phát hiện muộn, giảm việc phải làm lại, tăng độ tin cậy khi hoàn tất một yêu cầu trong Sprint và sử dụng AI một cách rõ ràng, có kiểm soát.
